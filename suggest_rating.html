@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions by Rating</title>
+</head>
+<body>
+    <h1>Books with Rating >= {{ suggestions[0].rating }}</h1>
+    <ul>
+        {% for suggestion in suggestions %}
+        <li>
+            <img src="{{ suggestion.image }}" alt="Book Cover">
+            <h3>{{ suggestion.title }}</h3>
+            <p>Author: {{ suggestion.author }}</p>
+            <p>Rating: {{ suggestion.rating }}</p>
+            <p>{{ suggestion.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

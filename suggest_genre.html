@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions by Genre</title>
+</head>
+<body>
+    <h1>Books in {{ suggestions[0].genre }} Genre</h1>
+    <ul>
+        {% for suggestion in suggestions %}
+        <li>
+            <img src="{{ suggestion.image }}" alt="Book Cover">
+            <h3>{{ suggestion.title }}</h3>
+            <p>Author: {{ suggestion.author }}</p>
+            <p>Genre: {{ suggestion.genre }}</p>
+            <p>{{ suggestion.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
